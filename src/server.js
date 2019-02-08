@@ -33,7 +33,7 @@ function establishRoutes() {
     });
 
     /* Style Sheets */
-    app.get('/css/:id', (req, res) => res.sendFile(__dirname + '/css/' + req.param.id));
+    app.get('/css/:id', (req, res) => res.sendFile(__dirname + '/css/' + req.params.id));
 }
 
 /* Dynamically updates available blogposts */
