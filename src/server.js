@@ -31,6 +31,9 @@ function establishRoutes() {
             }
         })
     });
+
+    /* Style Sheets */
+    app.get('/css/:id', (req, res) => res.sendFile(__dirname + '/css/' + req.param.id));
 }
 
 /* Dynamically updates available blogposts */

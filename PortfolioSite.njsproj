@@ -35,7 +35,7 @@
     <Content Include="src\posts\test.md" />
     <Content Include="src\scripts\generateposts.js" />
     <Content Include="src\scripts\renderpost.js" />
-    <Content Include="src\styles\styles.css" />
+    <Content Include="src\css\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PortfolioSite" />
@@ -44,7 +44,7 @@
     <Folder Include="src\html" />
     <Folder Include="src\posts" />
     <Folder Include="src\scripts" />
-    <Folder Include="src\styles" />
+    <Folder Include="src\css\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
