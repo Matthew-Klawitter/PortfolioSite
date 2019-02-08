@@ -3,6 +3,8 @@ const chokidar = require('chokidar');
 const express = require('express');
 const app = express();
 const blogsPath = __dirname + '/posts';
+// If true: makes logging highly verbose
+const env_testing = true;
 
 // list containing all markdown files in blogsPath
 var postlist;
@@ -44,15 +46,18 @@ function startBlogWatcher() {
     });
 
     // Listener for posts added to dir blogsPath
-    watcher.on('add', function(path) {
-        console.log(`File ${path} has been added`);
+    watcher.on('add', function (path) {
+        if (env_testing) {
+            console.log(`File ${path} has been added to post list`);
+        }
+        
         postlist = fs.readdirSync(blogsPath);
     });
 }
 
 /* Starts the node */
 function start(port) {
-    app.listen(port, () => console.log(`App is listening on port ${port}!`));
+    app.listen(port, () => console.log(`App is now listening on port ${port}!`));
 }
 
 module.exports = {
