@@ -2,7 +2,6 @@ const fs = require('fs');
 const chokidar = require('chokidar');
 const express = require('express');
 const app = express();
-const port = 3000;
 const blogsPath = __dirname + '/posts';
 
 // list containing all markdown files in blogsPath
@@ -49,7 +48,7 @@ function startBlogWatcher() {
 }
 
 /* Starts the node */
-function start() {
+function start(port) {
     app.listen(port, () => console.log(`App is listening on port ${port}!`));
 }
 
