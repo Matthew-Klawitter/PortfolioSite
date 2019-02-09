@@ -5,6 +5,9 @@
     box-sizing: border-box; 
     list-style-type: none;
 }
+html, body {
+    height: 100%;
+}
 
 /* menu bar */
 header {
@@ -14,10 +17,11 @@ header {
     background-color: white;
     box-shadow: 0px 4px 4px grey;
 }
-#logo {
+.fitinline {
     float: left;
     display: block;
-    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 li {
     float: left;
@@ -32,10 +36,46 @@ li a:hover {
     background-color: lightblue;
 }
 
-/* main content */
+/* main content TODO: Convert most of the padding to margins*/
 article {
-    padding-top: 100px;
-    margin: 0 1em;
+    padding-top: 5%;
+    padding-bottom: 100%;
+}
+#featured {
+    float: left;
+    width: 70%
+    /*padding: 0px 55% 5% 15%;*/
+}
+.post {
+    margin-top: 1em;
+    display: inline;
+    word-wrap: break-word
+}
+#aside {
+    float: left;
+    width: 30%;
+    /*padding: 0px 15% 5% 5%;*/
+}
+.widget {
+    margin-top: 1em;
+    display: inline;
+    word-wrap: break-word
 }
 
 /* footer */
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px;
+}
+footer {
+    height: 142px;
+    background-color: dimgrey;
+}
+.footer_content {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
