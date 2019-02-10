@@ -11,42 +11,36 @@ html, body {
 
 /* menu bar */
 header {
+    top: 0;
     width: 100%;
-    min-height: 50px;
-    position: fixed;
     background-color: white;
+    position: fixed;
     box-shadow: 0px 4px 4px grey;
 }
-.fitinline {
-    float: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-li {
+header li {
     float: left;
     text-align: center;
 }
-li a {
+header li a {
     display: block;
     padding: 20px;
     text-decoration: none;
 }
-li a:hover {
+header li a:hover {
     background-color: lightblue;
 }
 
 /* main content */
-article {
-    padding-top: 5%;
-    padding-bottom: 100%;
+#main {
+    min-height: 100%;
+    margin: 100px 20px -100px 20px;
 }
-#featured {
+#article {
     float: left;
     width: 70%
     /*padding: 0px 55% 5% 15%;*/
 }
-.post {
+.feature {
     margin-top: 1em;
     display: inline;
     word-wrap: break-word
@@ -63,14 +57,8 @@ article {
 }
 
 /* footer */
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px;
-}
 footer {
-    height: 142px;
+    height: 100px;
     background-color: dimgrey;
 }
 .footer_content {
