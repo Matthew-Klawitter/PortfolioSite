@@ -33,7 +33,7 @@ header li a:hover {
 /* main content */
 #main {
     min-height: 100%;
-    margin: 100px 20px -100px 20px;
+    margin: 100px 20px 0 20px;
 }
 #article {
     float: left;
