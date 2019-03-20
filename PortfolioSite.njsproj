@@ -22,11 +22,13 @@
   <ItemGroup>
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <Content Include="src\html\post.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\public\assets\images\Site_Logo.png" />
     <Content Include="src\index.js" />
     <Content Include="src\server.js" />
     <Content Include="src\html\about.html" />
-    <Content Include="src\html\blogpost.html" />
     <Content Include="src\html\blog.html" />
     <Content Include="src\html\comic.html" />
     <Content Include="src\html\index.html" />
@@ -34,8 +36,6 @@
     <Content Include="src\html\projects.html" />
     <Content Include="src\posts\anothertest.md" />
     <Content Include="src\posts\test.md" />
-    <Content Include="src\public\scripts\generateposts.js" />
-    <Content Include="src\public\scripts\renderpost.js" />
     <Content Include="src\public\css\styles.css" />
   </ItemGroup>
   <ItemGroup>
@@ -51,7 +51,13 @@
     <Folder Include="src\public\css\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\public\scripts\blog.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\public\scripts\display_featured.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\public\scripts\post.js">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

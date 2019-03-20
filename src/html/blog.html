@@ -1,17 +1,31 @@
-﻿<!DOCTYPE html>
+﻿<!Doctype html>
 <html>
-    <head>
-        <title>Blog</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/css/styles.css">
-    </head>
-    <body>
-        <header>
-        </header>
-        <article>
-        </article>
-        <footer>
-        </footer>
-    </body>
+<head>
+    <title>Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .post {
+            padding: 10px;
+            min-height: 3em;
+            margin-top: 2em;
+            background-color: lightgray;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .post h2, .post_data {
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js"></script>
+    <script src="/scripts/blog.js"></script>
+</head>
+<body>
+    <div id="node">
+
+    </div>
+</body>
 </html>

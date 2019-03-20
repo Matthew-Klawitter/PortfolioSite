@@ -3,8 +3,6 @@ const chokidar = require('chokidar');
 const express = require('express');
 const app = express();
 const blogsPath = __dirname + '/posts';
-// If true: makes logging highly verbose
-const env_testing = true;
 
 // list containing all markdown files in blogsPath
 var postlist;
@@ -18,11 +16,11 @@ function establishRoutes() {
     app.get('/media', (req, res) => res.sendFile(__dirname + '/html/media.html'));
     app.get('/comic', (req, res) => res.sendFile(__dirname + '/html/comic.html'));
     app.get('/about', (req, res) => res.sendFile(__dirname + '/html/about.html'));
-    app.get('/blog/post', (req, res) => res.sendFile(__dirname + '/html/blogpost.html'));
+    app.get('/blog/post', (req, res) => res.sendFile(__dirname + '/html/post.html'));
 
     /* Data routes */
     app.get('/blog/list', (req, res) => res.send(postlist));
-    app.get('/blog/file', function(req, res) {
+    app.get('/blog/file', (req, res) => {
         fs.readFile(blogsPath + '/' + req.query.id, 'utf8', function read(err, data) {
             if (err) {
                 console.warn(err);
@@ -34,7 +32,7 @@ function establishRoutes() {
         })
     });
 
-    /* Static files */
+    /* Static files (css, etc.) */
     app.use(express.static(__dirname + '/public'));
 }
 
@@ -46,11 +44,7 @@ function startBlogWatcher() {
     });
 
     // Listener for posts added to dir blogsPath
-    watcher.on('add', function (path) {
-        if (env_testing) {
-            console.log(`File ${path} has been added to post list`);
-        }
-        
+    watcher.on('add', (path) => {
         postlist = fs.readdirSync(blogsPath);
     });
 }
